@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* images */
+
+.title-logo {
+  margin-top: 11px;
+  height: 37px;
+}
+
+/* =================
+Layout
+================= */
+
+.container {
+  width: 100%;
+  border: 1px solid rebeccapurple;
+}
+
+.container-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 17px;
+}
+
+/* navigation */
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 13px;
+}
+
+li a {
+  line-height: 13px;
+  text-decoration: none;
+  color: black;
+}
