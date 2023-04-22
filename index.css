@@ -13,6 +13,12 @@ body {
   height: 37px;
 }
 
+.hero-post {
+  background-image: url("images/hero-post-background-image.avif");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 /* =================
 Layout
 ================= */
@@ -27,6 +33,10 @@ Layout
   justify-content: space-between;
   align-items: center;
   padding: 9px 17px;
+}
+
+.hero-post {
+  margin: 0;
 }
 
 /* navigation */
