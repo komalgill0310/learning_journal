@@ -4,19 +4,31 @@
 
 body {
   margin: 0;
+  padding: 0;
+  min-height: 100vh;
 }
 
 /* images */
 
-.title-logo {
-  margin-top: 11px;
-  height: 37px;
+img {
+  width: 100%;
+  height: auto;
 }
 
-.hero-post {
-  background-image: url("images/hero-post-background-image.avif");
-  background-size: cover;
-  background-repeat: no-repeat;
+.title-logo {
+  margin-top: 21px;
+}
+
+/* HTML TAG */
+
+header {
+  height: 90px;
+  padding: 13px;
+}
+
+p {
+  padding: 13px 0;
+  margin: 0;
 }
 
 /* =================
@@ -25,18 +37,14 @@ Layout
 
 .container {
   width: 100%;
-  border: 1px solid rebeccapurple;
+  margin: 0;
+  padding: 0;
 }
 
 .container-flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 9px 17px;
-}
-
-.hero-post {
-  margin: 0;
 }
 
 /* navigation */
@@ -51,4 +59,34 @@ li a {
   line-height: 13px;
   text-decoration: none;
   color: black;
+}
+
+/* main-section */
+
+main {
+  margin-bottom: 34px;
+}
+
+.article-hero {
+  position: relative;
+  width: 100%;
+}
+
+.hero-date {
+  position: absolute;
+  top: 61px;
+  left: 16px;
+  margin-top: 87px;
+}
+
+.hero-title {
+  position: absolute;
+  top: 167px;
+  left: 16px;
+}
+
+.hero-body {
+  position: absolute;
+  top: 217px;
+  left: 16px;
 }
