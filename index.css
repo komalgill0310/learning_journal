@@ -29,6 +29,7 @@ img {
   display: grid;
   grid-template: auto / auto auto;
   gap: 1em;
+  align-items: end;
 }
 
 p {
@@ -47,6 +48,7 @@ nav ul {
   display: flex;
   flex-direction: row;
   gap: 13px;
+  justify-content: end;
 }
 
 li a {
@@ -71,6 +73,9 @@ main {
   background-color: brown;
   color: white;
 }
+
+/* =============================== */
+/* COMMENTED CODE */
 
 /* nav {
   grid-column-end: 2 / -2;
