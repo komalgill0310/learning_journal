@@ -6,8 +6,9 @@ body {
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 1em;
+  grid-gap: 1em;
   grid-template: 200px auto auto 100px / auto;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 /* images */
@@ -29,13 +30,19 @@ img {
   padding: 37px 17px 0 17px;
   display: grid;
   grid-template: auto / auto auto;
-  gap: 1em;
+  grid-gap: 0.25em 0;
   align-items: end;
 }
 
-p {
-  padding: 13px 0;
+.header img {
+  width: 100%;
+}
+
+p,
+h2 {
+  padding: 0;
   margin: 0;
+  word-wrap: break-word;
 }
 
 /* =================
@@ -62,39 +69,98 @@ li a {
 
 main {
   margin-bottom: 34px;
-  /* display: grid;
-  gap: 3em; */
+  display: grid;
+  grid-gap: 1.5em 0;
 }
 
 article {
   display: grid;
-  grid-template: repeat(auto-fit, 1fr) / auto;
-  gap: 1em;
+  grid-template: 45% auto auto auto / auto;
+  border: 1px solid red;
+  grid-gap: -5em 0;
+}
+
+article img {
+  border-radius: 3px;
+}
+
+/* aritcle img {
+  object-fit: cover;
+} */
+/* article p {
+  padding: 14px 0 7px;
+} */
+
+/* article h2 {
+  margin-top: -23px;
+} */
+
+.article-date {
+  border: 2px solid brown;
+  align-self: center;
+  padding: 7px 0;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.article-title {
+  align-self: center;
+  padding: 7px 0;
+  border: 2px dashed orangered;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 108.2%;
+  color: #141414;
+}
+
+.article-body {
+  /* margin-top: -21px; */
+  align-self: center;
+  padding: 7px 0;
+  border: 2px solid green;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 125%;
+  color: #505050;
 }
 
 .article-one {
-  position: relative;
-  width: 100%;
   padding: 0;
 }
 
+.article-one .article-img {
+  grid-row: 1 / -1;
+  grid-column: 1;
+  border-radius: 0;
+}
+
 .article-one .article-date {
-  position: absolute;
-  top: 61px;
-  left: 16px;
-  margin-top: 87px;
+  grid-row: 1 / -1;
+  grid-column: 1;
+  align-self: center;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ffffff;
 }
 
 .article-one .article-title {
-  position: absolute;
-  top: 167px;
-  left: 16px;
+  grid-row: 1 / -1;
+  grid-column: 1;
+  align-self: center;
+  padding-top: 71px;
+  font-size: 32px;
+  color: #ffffff;
+  line-height: 188.2%;
 }
 
 .article-one .article-body {
-  position: absolute;
-  top: 217px;
-  left: 16px;
+  grid-row: 1 / -1;
+  grid-column: 1;
+  align-self: end;
+  line-height: 20px;
+  color: #ffffff;
 }
 
 /* recent article section */
@@ -102,9 +168,9 @@ article {
   padding: 0 20px;
 }
 
-.article-two {
+/* .article-two {
   margin-top: 34px;
-}
+} */
 
 /* FOOTER */
 .footer {
