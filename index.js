@@ -5,7 +5,7 @@ function renderData() {
   let articles = "";
   posts.forEach((post) => {
     articles += `
-      <article class="article-recent">
+      <article class=${post.id}>
         <img class="article-img" src=${post.img} alt=${post.alt}/>
         <p class="article-date">${post.date}</p>
         <h2 class="article-title">${post.title}</h2>
