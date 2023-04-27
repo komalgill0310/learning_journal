@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-header,
+/* header, */
 main,
 footer {
   border: 2px solid red;
@@ -36,14 +36,16 @@ nav {
 
 nav ul {
   list-style: none;
+  align-items: center;
   display: flex;
   gap: 2em;
-  align-items: baseline;
 }
 
 li a {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 15px;
   color: #090909;
   text-decoration: none;
 }
+
+/* MAIN */
