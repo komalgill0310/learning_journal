@@ -3,7 +3,7 @@
 }
 
 /* header, */
-main,
+
 footer {
   border: 2px solid red;
 }
@@ -26,7 +26,7 @@ body {
 }
 
 .title-logo {
-  width: 50%;
+  width: 63%;
 }
 
 nav {
@@ -56,11 +56,10 @@ img {
 
 /* ARTICLE*/
 article {
-  border: 2px solid pink;
   display: grid;
-  grid-template-rows: repeat(4, minmax(1em, auto));
-  grid-template-columns: repeat(2, minmax(30px, 1fr));
-  padding: 20px;
+  grid-template-rows: repeat(4, minmax(0.5em, auto));
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  padding: 1.25em; /* 20px */
 }
 
 .article-img {
@@ -68,35 +67,55 @@ article {
   grid-column: 1 / -1;
 }
 
+.article-date {
+  margin-top: 0.875em; /* 14px */
+  margin-bottom: 0;
+}
+
+.article-title {
+  margin: 0.25em 0; /* 8px */
+}
+
 .article-date,
 .article-title {
-  grid-column: 1;
   grid-column: 1;
 }
 
 .article-body {
   grid-column: 1 / -1;
+  margin-top: 0;
+  white-space: pre-wrap;
+  font-size: 1rem; /* 16px */
+  line-height: 20px;
 }
 
 /* ARITCLE ONE */
 
 .article-one {
   padding: 0;
+  color: whitesmoke;
 }
 
 .article-one .article-date {
   grid-row: 2;
-  align-self: center;
-  /* border: 1px solid blueviolet; */
-  padding-left: 20px;
+  padding-left: 1.25em; /* 20px */
+  font-size: 1rem; /*16px */
 }
 
 .article-one .article-title {
-  padding-left: 20px;
+  padding-left: 20px; /* 20px */
   grid-row: 3;
+  font-weight: 700;
+  line-height: 102.8%;
+  letter-spacing: -0.03em;
+  font-size: 32px; /* 32px */
+  word-wrap: break-word;
+  width: 300px;
 }
 
 .article-one .article-body {
   grid-row: 4;
-  padding-left: 20px;
+  padding-left: 1.25em; /* 20px */
+  width: 374px;
+  margin-bottom: 1.56em; /* 25px */
 }
