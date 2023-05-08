@@ -32,7 +32,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  padding: 1em 1.25em; /* 17px 20px */
+  padding: 1em 1.25em; /* 16px 20px */
 }
 
 .title-logo {
@@ -106,6 +106,10 @@ article {
   color: whitesmoke;
 }
 
+.article-one .article-img {
+  margin-bottom: 1em; /* 16px */
+}
+
 .article-one .article-date {
   grid-row: 2;
   padding-left: 1.25em; /* 20px */
@@ -127,7 +131,7 @@ article {
   grid-row: 4;
   padding-left: 1.25em; /* 20px */
   width: 374px;
-  margin-bottom: 1.56em; /* 25px */
+  margin-bottom: 2.5em; /* 40px */
 }
 
 /* FOOTER */
@@ -160,10 +164,11 @@ article {
 
 /* VIEW MORE SECTION*/
 
-.view-more {
+.view {
   text-align: center;
 }
-.btn-view-more {
+
+.btn-view {
   border: none;
   background-color: white;
   font-weight: 700;

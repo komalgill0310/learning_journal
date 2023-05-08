@@ -1,19 +1,27 @@
 import { posts } from "/posts.js";
 
-function renderData() {
+const defaultNumOfPostsDisplay = 3;
+
+function renderData(startIndex, postsLength) {
   const mainTag = document.querySelector(".main");
   let articles = "";
-  posts.forEach((post) => {
+  for (let i = startIndex; i < postsLength; i++) {
     articles += `
-      <article class=${post.id}>
-        <img class="article-img" src=${post.img} alt=${post.alt}/>
-        <p class="article-date">${post.date}</p>
-        <h2 class="article-title">${post.title}</h2>
-        <p class="article-body">${post.body}</p>
+      <article class=${posts[i].id}>
+        <img class="article-img" src=${posts[i].img} alt=${posts[i].alt}/>
+        <p class="article-date">${posts[i].date}</p>
+        <h2 class="article-title">${posts[i].title}</h2>
+        <p class="article-body">${posts[i].body}</p>
       </article>
      `;
-  });
+  }
   mainTag.innerHTML += articles;
 }
 
-renderData();
+renderData(0, defaultNumOfPostsDisplay);
+
+document.getElementById("btn-view").addEventListener("click", (e) => {
+  e.preventDefault();
+  const postsDisplayed = defaultNumOfPostsDisplay;
+  renderData(postsDisplayed, posts.length);
+});
