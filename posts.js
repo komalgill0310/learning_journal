@@ -21,11 +21,11 @@ export const posts = [
     alt: "image information",
     date: "Apr22,2023",
     title: "blog Two",
-    body: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id minima magnam blanditiis saepe consequatur reiciendis, numquam magni fuga. Temporibus exercitationem deserunt nobis ratione, iure aut quasi dolor modi ea harum!",
+    body: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id minimadfghh magnam blanditiis saepe consequatur reiciendis, numquam magni fuga. Temporibus exercitationem deserunt nobis ratione, iure aut quasi dolor modi ea harum!",
   },
   {
     id: "article-four",
-    img: "images/blog_images/blogThree.avif",
+    img: "images/blog_images/blogOne.avif",
     alt: "image information",
     date: "Apr22,2023",
     title: "blog Three",
