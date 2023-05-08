@@ -101,22 +101,22 @@ article {
 
 /* ARITCLE ONE */
 
-.article-one {
+.article-hero {
   padding: 0;
   color: whitesmoke;
 }
 
-.article-one .article-img {
+.article-hero .article-img {
   margin-bottom: 1em; /* 16px */
 }
 
-.article-one .article-date {
+.article-hero .article-date {
   grid-row: 2;
   padding-left: 1.25em; /* 20px */
   font-size: 1rem; /*16px */
 }
 
-.article-one .article-title {
+.article-hero .article-title {
   padding-left: 20px; /* 20px */
   grid-row: 3;
   font-weight: 700;
@@ -127,7 +127,7 @@ article {
   width: 300px;
 }
 
-.article-one .article-body {
+.article-hero .article-body {
   grid-row: 4;
   padding-left: 1.25em; /* 20px */
   width: 374px;

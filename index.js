@@ -1,6 +1,6 @@
 import { posts } from "/posts.js";
 
-const defaultNumOfPostsDisplay = 3;
+const defaultNumOfPostsDisplay = 4;
 
 function renderData(startIndex, postsLength) {
   const mainTag = document.querySelector(".main");
