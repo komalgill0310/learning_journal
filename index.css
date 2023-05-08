@@ -10,6 +10,22 @@ body {
   font-family: "Source Sans Pro";
 }
 
+/* header {
+  border: 1px solid red;
+}
+
+main {
+  border: 1px solid purple;
+}
+
+section {
+  border: 3px dashed orange;
+}
+
+footer {
+  border: 2px solid brown;
+} */
+
 /* HEADER */
 
 .header {
@@ -122,6 +138,7 @@ article {
   background-color: black;
   justify-items: center;
   align-items: center;
+  margin-top: 41px;
 }
 
 .learning-journal-text {
@@ -139,4 +156,19 @@ article {
   font-size: 0.75rem; /* 12px */
   padding: 0 1.83em; /* 22px */
   line-height: 125%;
+}
+
+/* VIEW MORE SECTION*/
+
+.view-more {
+  text-align: center;
+}
+.btn-view-more {
+  border: none;
+  background-color: white;
+  font-weight: 700;
+  text-decoration: underline;
+  font-size: 1rem; /* 16px */
+  line-height: 20.11px;
+  cursor: pointer;
 }
