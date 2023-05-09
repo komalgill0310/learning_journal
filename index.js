@@ -18,7 +18,29 @@ function renderData(startIndex, postsLength) {
   mainTag.innerHTML = articles;
 }
 
+// HOW TO UPDATE THE STYLE FOR THE HERO ARTICLE WHEN CLICK ON THE HERO'S IMAGE
+
+function heroImageClick() {
+  const heroIndex = 0;
+  const articleHero = document.querySelector(`.${posts[heroIndex].id}`);
+  articleHero.addEventListener("click", (e) => {
+    e.preventDefault();
+    articleHero.innerHTML = `
+      <p class="article-date">${posts[heroIndex].date}</p>
+      <h2 class="article-title">${posts[heroIndex].title}</h2>
+      <p class="article-body">${posts[heroIndex].body}</p>
+      <img class="article-img" src=${posts[heroIndex].img} />
+      <h4 class="sub1">How I stay committed to learning</h4>
+      <p class="sub1-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quae enim obcaecati numquam quidem vero praesentium, hic nulla ab sed iusto culpa voluptatibus molestias debitis? Accusamus reiciendis vel labore deserunt!</p>
+      <h4 class="sub2">How I got started</h4>
+      <p class="sub2-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quae enim obcaecati numquam quidem vero praesentium, hic nulla ab sed iusto culpa voluptatibus molestias debitis? Accusamus reiciendis vel labore deserunt!</p>
+    `;
+    articleHero.classList.add("active");
+  });
+}
+
 renderData(0, defaultNumOfPostsDisplay);
+heroImageClick();
 displayPosts(defaultNumOfPostsDisplay);
 
 function displayPosts(postsDisplayed) {
