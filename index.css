@@ -109,6 +109,8 @@ article {
   line-height: 102.8%;
   letter-spacing: -0.03em;
   font-size: 2rem; /* 32px */
+  max-width: 400px;
+  margin-left: -19px;
 }
 
 .article-hero .article-body {
@@ -135,6 +137,8 @@ article {
 .article-hero.active .article-title {
   grid-row: 2;
   padding: 0;
+  margin-left: 1px;
+  justify-self: start;
 }
 
 .article-hero.active .article-body {
@@ -151,34 +155,35 @@ article {
   border-radius: 3px;
 }
 
-.article-hero.active .sub1 {
+.article-hero.active .article-hero-sub-heading-one {
   grid-row: 5;
   grid-column: 1 / -1;
   margin: 0;
 }
 
-.article-hero.active .sub1-body {
+.article-hero.active .article-hero-sub-heading-body-one {
   grid-row: 6;
   grid-column: 1 / -1;
 }
 
-.article-hero.active .sub2 {
+.article-hero.active .article-hero-sub-heading-two {
   grid-row: 7;
   grid-column: 1 / -1;
   margin: 0;
 }
 
-.article-hero.active .sub2-body {
+.article-hero.active .article-hero-sub-heading-body-two {
   grid-row: 8;
   grid-column: 1 / -1;
 }
 
-.article-hero.active .recent-posts {
+.article-hero.active .recent-posts-heading {
   grid-column: 1 / -1;
   justify-self: center;
   font-weight: 700;
   line-height: 20px;
 }
+
 /* FOOTER */
 
 .footer {

@@ -29,11 +29,11 @@ function heroImageClick() {
   articleHero.addEventListener("click", (e) => {
     e.preventDefault();
     articleHero.innerHTML += `
-      <h4 class="sub1">How I stay committed to learning</h4>
-      <p class="sub1-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quae enim obcaecati numquam quidem vero praesentium, hic nulla ab sed iusto culpa voluptatibus molestias debitis? Accusamus reiciendis vel labore deserunt!</p>
-      <h4 class="sub2">How I got started</h4>
-      <p class="sub2-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quae enim obcaecati numquam quidem vero praesentium, hic nulla ab sed iusto culpa voluptatibus molestias debitis? Accusamus reiciendis vel labore deserunt!</p>
-      <h4 class="recent-posts">Recent Posts</h4>
+      <h4 class="article-hero-sub-heading-one">How I stay committed to learning</h4>
+      <p class="article-hero-sub-heading-body-one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quae enim obcaecati numquam quidem vero praesentium, hic nulla ab sed iusto culpa voluptatibus molestias debitis? Accusamus reiciendis vel labore deserunt!</p>
+      <h4 class="article-hero-sub-heading-two">How I got started</h4>
+      <p class="article-hero-sub-heading-body-two">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quae enim obcaecati numquam quidem vero praesentium, hic nulla ab sed iusto culpa voluptatibus molestias debitis? Accusamus reiciendis vel labore deserunt!</p>
+      <h4 class="recent-posts-heading">Recent Posts</h4>
     `;
     articleHero.classList.add("active");
   });
