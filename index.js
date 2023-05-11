@@ -1,14 +1,15 @@
 import { posts } from "/posts.js";
 
 const defaultNumOfPostsDisplay = 4;
-const mainTag = document.querySelector(".main");
 
+const mainTag = document.querySelector(".main");
 function renderData(startIndex, postsLength) {
   let articles = "";
   for (let i = startIndex; i < postsLength; i++) {
     articles += createPost(i);
   }
   mainTag.innerHTML += articles;
+  heroImageClick();
 }
 
 function createPost(index) {
@@ -41,7 +42,6 @@ function heroImageClick() {
 
 renderData(0, defaultNumOfPostsDisplay);
 displayPosts(defaultNumOfPostsDisplay);
-heroImageClick();
 
 function displayPosts(postsDisplayed) {
   const btnView = document.getElementById("btn-view");
@@ -50,15 +50,15 @@ function displayPosts(postsDisplayed) {
     btnView.addEventListener("click", (e) => {
       e.preventDefault();
       if (clickCount === 1 && btnView.textContent === "View Less") {
-        renderData(1, postsDisplayed);
+        mainTag.innerHTML = "";
+        renderData(0, postsDisplayed);
         btnView.textContent = "View More";
         clickCount--;
       } else if (clickCount === 0 && btnView.textContent === "View More") {
-        renderData(1, posts.length);
+        renderData(postsDisplayed, posts.length);
         btnView.textContent = "View Less";
         clickCount++;
       }
-      heroImageClick();
     });
   }
   return handleClick();

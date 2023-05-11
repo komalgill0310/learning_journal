@@ -182,6 +182,7 @@ article {
   justify-self: center;
   font-weight: 700;
   line-height: 20px;
+  grid-row: 9;
 }
 
 /* FOOTER */
