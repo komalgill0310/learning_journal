@@ -10,6 +10,7 @@ function renderData(startIndex, postsLength) {
   }
   mainTag.innerHTML += articles;
   heroImageClick();
+  // aboutMe();
 }
 
 function createPost(index) {
@@ -63,3 +64,11 @@ function displayPosts(postsDisplayed) {
   }
   return handleClick();
 }
+
+// function aboutMe() {
+const aboutMe = document.querySelector(".about-me");
+aboutMe.addEventListener("click", (e) => {
+  e.preventDefault();
+  console.log("I am about Me!");
+});
+// }
