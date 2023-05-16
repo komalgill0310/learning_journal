@@ -16,6 +16,8 @@ function renderData(startIndex, postsLength) {
   mainTag.innerHTML += articles;
   // updateHeroArticle();
   heroImageClick();
+  // handleAboutMeClick();
+  console.log("checking if renderData is getting called!");
 }
 
 function displayPosts(postsDisplayed) {
@@ -35,6 +37,7 @@ function displayPosts(postsDisplayed) {
         clickCount++;
       }
     });
+    console.log("checking for display Posts");
   }
   return handleBtnViewClick();
 }
@@ -50,16 +53,6 @@ function createPost(index) {
  `;
   return post;
 }
-
-// function updateHeroArticle() {
-//   const isHeroImageSrcIncluded = getElement(heroIndex)
-//     .querySelector(".article-img")
-//     .src.includes(`${posts[heroIndex].img}`);
-//   if (isHeroImageSrcIncluded) {
-//     heroImageClick();
-//     console.log(isHeroImageSrcIncluded);
-//   }
-// }
 
 function heroImageClick() {
   getElement(heroIndex).addEventListener("click", () => {
@@ -80,14 +73,15 @@ function handleAboutMeClick() {
   const heroImg = getElement(heroIndex).querySelector(".article-img");
   const heroTitle = getElement(heroIndex).querySelector(".article-title");
   const heroDate = getElement(heroIndex).querySelector(".article-date");
+  //NOT UPDATING THE HTML FOR THE ELEMENT
   aboutMe.addEventListener("click", () => {
-    heroDate.textContent = "";
-    heroImg.src = "images/hero_images/profile-pic.jpg";
-    heroTitle.textContent =
-      "Hello there! My name is Komal and welcome to my learning journal.";
-    getElement(heroIndex).innerHTML += updateHeroPost();
     getElement(heroIndex).classList.remove("active");
     getElement(heroIndex).classList.add("about-me");
+    heroDate.textContent = "";
+    heroImg.src = "images/hero_images/profile-pic.jpg";
+    heroTitle.innerHTML =
+      "Hello there! My name is Komal and welcome to my learning journal.";
+    getElement(heroIndex).innerHTML += updateHeroPost();
   });
 }
 
@@ -104,3 +98,13 @@ function updateHeroPost() {
 function getElement(index) {
   return document.querySelector(`.${posts[index].id}`);
 }
+
+// function updateHeroArticle() {
+//   const isHeroImageSrcIncluded = getElement(heroIndex)
+//     .querySelector(".article-img")
+//     .src.includes(`${posts[heroIndex].img}`);
+//   if (isHeroImageSrcIncluded) {
+//     heroImageClick();
+//     console.log(isHeroImageSrcIncluded);
+//   }
+// }
