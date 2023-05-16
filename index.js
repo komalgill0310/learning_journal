@@ -14,10 +14,7 @@ function renderData(startIndex, postsLength) {
     articles += createPost(i);
   }
   mainTag.innerHTML += articles;
-  // updateHeroArticle();
   heroImageClick();
-  // handleAboutMeClick();
-  console.log("checking if renderData is getting called!");
 }
 
 function displayPosts(postsDisplayed) {
@@ -37,7 +34,6 @@ function displayPosts(postsDisplayed) {
         clickCount++;
       }
     });
-    console.log("checking for display Posts");
   }
   return handleBtnViewClick();
 }
@@ -63,7 +59,6 @@ function heroImageClick() {
     ) {
       getElement(heroIndex).innerHTML += updateHeroPost();
       getElement(heroIndex).classList.add("active");
-      console.log("class active");
     }
   });
 }
@@ -98,13 +93,3 @@ function updateHeroPost() {
 function getElement(index) {
   return document.querySelector(`.${posts[index].id}`);
 }
-
-// function updateHeroArticle() {
-//   const isHeroImageSrcIncluded = getElement(heroIndex)
-//     .querySelector(".article-img")
-//     .src.includes(`${posts[heroIndex].img}`);
-//   if (isHeroImageSrcIncluded) {
-//     heroImageClick();
-//     console.log(isHeroImageSrcIncluded);
-//   }
-// }
