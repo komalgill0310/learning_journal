@@ -6,7 +6,7 @@ const mainTag = document.querySelector(".main");
 
 renderData(0, defaultNumOfPostsDisplay);
 displayPosts(defaultNumOfPostsDisplay);
-handleAboutMeClick();
+// handleAboutMeClick();
 
 function renderData(startIndex, postsLength) {
   let articles = "";
@@ -63,22 +63,22 @@ function heroImageClick() {
   });
 }
 
-function handleAboutMeClick() {
-  const aboutMe = document.querySelector(".about-me");
-  const heroImg = getElement(heroIndex).querySelector(".article-img");
-  const heroTitle = getElement(heroIndex).querySelector(".article-title");
-  const heroDate = getElement(heroIndex).querySelector(".article-date");
-  //NOT UPDATING THE HTML FOR THE ELEMENT
-  aboutMe.addEventListener("click", () => {
-    getElement(heroIndex).classList.remove("active");
-    getElement(heroIndex).classList.add("about-me");
-    heroDate.textContent = "";
-    heroImg.src = "images/hero_images/profile-pic.jpg";
-    heroTitle.innerHTML =
-      "Hello there! My name is Komal and welcome to my learning journal.";
-    getElement(heroIndex).innerHTML += updateHeroPost();
-  });
-}
+// function handleAboutMeClick() {
+const aboutMe = document.querySelector(".about-me");
+const heroImg = getElement(heroIndex).querySelector(".article-img");
+const heroTitle = getElement(heroIndex).querySelector(".article-title");
+const heroDate = getElement(heroIndex).querySelector(".article-date");
+//NOT UPDATING THE HTML FOR THE ELEMENT
+aboutMe.addEventListener("click", () => {
+  getElement(heroIndex).classList.remove("active");
+  getElement(heroIndex).classList.add("about-me");
+  heroDate.textContent = "";
+  heroImg.src = "images/hero_images/profile-pic.jpg";
+  heroTitle.innerHTML =
+    "Hello there! My name is Komal and welcome to my learning journal.";
+  getElement(heroIndex).innerHTML += updateHeroPost();
+});
+// }
 
 function updateHeroPost() {
   return `

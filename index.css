@@ -6,7 +6,7 @@ body {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(90px, 1fr));
   font-family: "Source Sans Pro";
 }
 
@@ -14,33 +14,44 @@ body {
 
 .header {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 50px auto auto;
   align-items: center;
-  padding: 1em 1.25em; /* 16px 20px */
+  column-gap: 0.25em;
+  padding: 0 14px;
 }
 
 .title-logo {
-  width: 63%;
+  max-width: 50px;
+  border-radius: 50%;
+}
+
+.learning-journal-header-text {
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 108.2%;
+  letter-spacing: -0.03em;
 }
 
 nav {
   justify-self: end;
   font-weight: 600;
+  align-self: center;
 }
 
 nav ul {
   list-style: none;
   align-items: center;
   display: flex;
-  gap: 1em;
+  gap: 0.5em;
   padding-inline-start: 0;
 }
 
 li a {
-  font-size: 1rem; /* 14px */
+  font-size: 0.75rem; /* 16px */
   line-height: 15px;
   color: #090909;
   text-decoration: none;
+  white-space: nowrap;
   cursor: pointer;
 }
 
@@ -71,6 +82,7 @@ article {
 .article-date {
   margin-top: 0.875em; /* 14px */
   margin-bottom: 0;
+  padding: 0;
 }
 
 .article-title {
@@ -97,10 +109,13 @@ article {
   grid-row: 1 / -1;
   max-width: 100%;
   border-radius: 0;
+  height: auto;
+  display: block;
 }
 
 .article-hero .article-date {
   grid-row: 2;
+  padding: 0 20px;
   font-size: 1rem; /*16px */
 }
 
@@ -111,10 +126,11 @@ article {
   letter-spacing: -0.03em;
   font-size: 2rem; /* 32px */
   max-width: 400px;
-  margin-left: -19px;
+  padding: 0 20px;
 }
 
 .article-hero .article-body {
+  padding: 0 20px;
   grid-row: 4;
   margin-bottom: 2.5em; /* 40px */
 }
@@ -280,3 +296,11 @@ article {
   cursor: pointer;
   margin: 0;
 }
+
+/* MEDIA QUERIES */
+
+/* @media (min-width: 500px) {
+  body {
+    background-color: red;
+  }
+} */
