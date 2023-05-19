@@ -126,8 +126,8 @@ article {
   line-height: 102.8%;
   letter-spacing: -0.03em;
   font-size: 2rem; /* 32px */
-  max-width: 400px;
-  padding: 0 9px;
+  /* max-width: 400px; */
+  padding: 0 20px;
   margin: 0;
 }
 
