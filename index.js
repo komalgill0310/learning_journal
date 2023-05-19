@@ -1,46 +1,36 @@
 import { posts } from "/posts.js";
 
 const defaultNumOfPostsDisplay = 4;
-const heroIndex = 0;
-const mainTag = document.querySelector(".main");
+const recentPostsSection = document.querySelector(".recent-posts-section");
+const aboutMeLink = document.querySelector("#about-me-link");
+const articleHero = document.querySelector(".article-hero");
+const btnView = document.getElementById("btn-view");
 
 renderData(0, defaultNumOfPostsDisplay);
-displayPosts(defaultNumOfPostsDisplay);
-
-const aboutMeLink = document.querySelector("#about-me-link");
-const articleHero = document.querySelector(`.${posts[heroIndex].id}`);
 
 articleHero.addEventListener("click", heroPostClick);
 aboutMeLink.addEventListener("click", handleAboutMeClick);
+btnView.addEventListener("click", () => {
+  handleBtnViewClick(defaultNumOfPostsDisplay);
+});
 
 function renderData(startIndex, postsLength) {
   let articles = "";
   for (let i = startIndex; i < postsLength; i++) {
     articles += createPost(i);
   }
-  mainTag.innerHTML += articles;
+  recentPostsSection.innerHTML += articles;
 }
 
-function displayPosts(postsDisplayed) {
-  let clickCount = 0;
-  const btnView = document.getElementById("btn-view");
-
-  function handleBtnViewClick() {
-    btnView.addEventListener("click", (e) => {
-      e.preventDefault();
-      if (clickCount === 1 && btnView.textContent === "View Less") {
-        mainTag.innerHTML = "";
-        renderData(0, postsDisplayed);
-        btnView.textContent = "View More";
-        clickCount--;
-      } else if (clickCount === 0 && btnView.textContent === "View More") {
-        renderData(postsDisplayed, posts.length);
-        btnView.textContent = "View Less";
-        clickCount++;
-      }
-    });
+function handleBtnViewClick(postsDisplayed) {
+  if (btnView.textContent === "View More") {
+    renderData(postsDisplayed, posts.length);
+    btnView.textContent = "View Less";
+  } else if (btnView.textContent === "View Less") {
+    recentPostsSection.innerHTML = "";
+    renderData(0, postsDisplayed);
+    btnView.textContent = "View More";
   }
-  return handleBtnViewClick();
 }
 
 function createPost(index) {
@@ -59,12 +49,11 @@ function heroPostClick() {
   if (
     articleHero
       .querySelector(".article-img")
-      .src.includes(`${posts[heroIndex].img}`)
+      .src.includes("hero-post-background-image.avif")
   ) {
     articleHero.innerHTML += updateHeroPost();
     articleHero.classList.add("active");
   }
-  console.log(articleHero.classList.length);
 }
 
 function handleAboutMeClick() {

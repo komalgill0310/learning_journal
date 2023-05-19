@@ -1,13 +1,5 @@
 export const posts = [
   {
-    id: "article-hero",
-    img: "images/hero_images/hero-post-background-image.avif",
-    alt: "image information",
-    date: "Apr22,2023",
-    title: "My new journey as a bootcamp student.",
-    body: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id minima magnam blanditiis saepe consequatur reiciendis, numquam magni fuga. Temporibus exercitationem deserunt nobis ratione, iure aut quasi dolor modi ea harum!",
-  },
-  {
     id: "article-one",
     img: "images/blog_images/blogOne.avif",
     alt: "image information",
