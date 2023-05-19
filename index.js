@@ -7,18 +7,24 @@ const mainTag = document.querySelector(".main");
 renderData(0, defaultNumOfPostsDisplay);
 displayPosts(defaultNumOfPostsDisplay);
 
+const aboutMeLink = document.querySelector("#about-me-link");
+const articleHero = document.querySelector(`.${posts[heroIndex].id}`);
+
+articleHero.addEventListener("click", heroPostClick);
+aboutMeLink.addEventListener("click", handleAboutMeClick);
+
 function renderData(startIndex, postsLength) {
   let articles = "";
   for (let i = startIndex; i < postsLength; i++) {
     articles += createPost(i);
   }
   mainTag.innerHTML += articles;
-  heroImageClick();
 }
 
 function displayPosts(postsDisplayed) {
-  const btnView = document.getElementById("btn-view");
   let clickCount = 0;
+  const btnView = document.getElementById("btn-view");
+
   function handleBtnViewClick() {
     btnView.addEventListener("click", (e) => {
       e.preventDefault();
@@ -49,41 +55,31 @@ function createPost(index) {
   return post;
 }
 
-function heroImageClick() {
-  getElement(heroIndex).addEventListener("click", () => {
-    if (
-      getElement(heroIndex)
-        .querySelector(".article-img")
-        .src.includes(`${posts[heroIndex].img}`)
-    ) {
-      getElement(heroIndex).innerHTML += updateHeroPost();
-      getElement(heroIndex).classList.add("active");
-    }
-    console.log(getElement(heroIndex).classList.length);
-  });
-}
-
-function aboutMeLinkClick() {
-  const aboutMeLink = document.querySelector("#about-me-link");
-  function handleAboutMeClick() {
-    aboutMeLink.addEventListener("click", () => {
-      getElement(heroIndex).classList.add("about-me");
-      const heroDate = getElement(heroIndex).querySelector(".article-date");
-      const heroImg = getElement(heroIndex).querySelector(".article-img");
-      const heroTitle = getElement(heroIndex).querySelector(".article-title");
-      heroDate.remove();
-
-      getElement(heroIndex).classList.remove("active");
-      heroImg.src = "images/hero_images/profile-pic.jpg";
-      heroTitle.innerHTML =
-        "Hello there! My name is Komal and welcome to my learning journal.";
-      getElement(heroIndex).innerHTML += updateHeroPost();
-    });
+function heroPostClick() {
+  if (
+    articleHero
+      .querySelector(".article-img")
+      .src.includes(`${posts[heroIndex].img}`)
+  ) {
+    articleHero.innerHTML += updateHeroPost();
+    articleHero.classList.add("active");
   }
-  return handleAboutMeClick();
+  console.log(articleHero.classList.length);
 }
 
-aboutMeLinkClick();
+function handleAboutMeClick() {
+  const heroDate = articleHero.querySelector(".article-date");
+  const heroImg = articleHero.querySelector(".article-img");
+  const heroTitle = articleHero.querySelector(".article-title");
+
+  heroDate.textContent = "";
+  heroImg.src = "images/hero_images/profile-pic.jpg";
+  heroTitle.innerHTML =
+    "Hello there! My name is Komal and welcome to my learning journal.";
+  articleHero.innerHTML += updateHeroPost();
+  articleHero.classList.remove("active");
+  articleHero.classList.add("about-me");
+}
 
 function updateHeroPost() {
   return `
@@ -93,8 +89,4 @@ function updateHeroPost() {
   <p class="article-hero-sub-heading-body-two">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto quae enim obcaecati numquam quidem vero praesentium, hic nulla ab sed iusto culpa voluptatibus molestias debitis? Accusamus reiciendis vel labore deserunt!</p>
   <h4 class="recent-posts-heading">Recent Posts</h4>
 `;
-}
-
-function getElement(index) {
-  return document.querySelector(`.${posts[index].id}`);
 }
