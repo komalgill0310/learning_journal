@@ -1,6 +1,6 @@
 import { posts } from "/posts.js";
 
-const defaultNumOfPostsDisplay = 4;
+const defaultNumOfPostsDisplay = 3;
 const recentPostsSection = document.querySelector(".recent-posts-section");
 const aboutMeLink = document.querySelector("#about-me-link");
 const articleHero = document.querySelector(".article-hero");
