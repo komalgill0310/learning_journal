@@ -369,4 +369,34 @@ article {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(309px, 1fr));
   }
+
+  .active,
+  .about-me {
+    max-width: none;
+    align-items: center;
+  }
+
+  .active .article-date,
+  .active .article-title,
+  .active .article-body,
+  .active .article-hero-sub-heading-one,
+  .active .article-hero-sub-heading-body-one,
+  .active .article-hero-sub-heading-two,
+  .active .article-hero-sub-heading-body-two {
+    max-width: 600px;
+    justify-self: center;
+    width: 100%;
+  }
+
+  .active .article-img {
+    max-width: 979px;
+  }
+
+  .active .article-title {
+    font-size: 27px;
+  }
+
+  .active .article-body {
+    font-size: 1rem;
+  }
 }
