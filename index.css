@@ -326,3 +326,47 @@ article {
     margin: 19px 0;
   }
 }
+
+@media (min-width: 541px) {
+  .header {
+    height: 113px;
+  }
+
+  .learning-journal-header-text,
+  li a {
+    font-size: 21px;
+  }
+
+  nav ul {
+    gap: 2.5em;
+  }
+
+  .article-hero .article-img {
+    height: 388px;
+  }
+
+  .article-hero .article-title {
+    max-width: none;
+    font-size: 40px;
+  }
+
+  .article-hero .article-body {
+    max-width: 614.84px;
+    font-size: 1.35rem;
+    text-shadow: 1px -1.5px 2px black;
+  }
+
+  .active .article-body,
+  .about-me .article-body {
+    text-shadow: none;
+  }
+
+  .about-me .article-img {
+    height: auto;
+  }
+
+  .recent-posts-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(309px, 1fr));
+  }
+}
