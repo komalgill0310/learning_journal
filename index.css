@@ -56,6 +56,11 @@ li a {
   padding: 0;
 }
 
+li a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
 /* IMAGES */
 img {
   object-fit: cover;
@@ -479,6 +484,11 @@ article {
 }
 
 @media (min-width: 1280px) {
+  .article-hero .article-img {
+    max-height: 821px;
+    height: 100%;
+  }
+
   .about-me .article-title {
     margin-left: 0;
   }
@@ -489,6 +499,11 @@ article {
 
   .recent-posts-section {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(409px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(713px, 1fr));
+  }
+
+  .recent-posts-section article {
+    max-width: 1313px;
+    width: 100%;
   }
 }
