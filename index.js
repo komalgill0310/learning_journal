@@ -29,7 +29,7 @@ function heroPostClick() {
       .src.includes("hero-post-background-image.avif")
   ) {
     articleHero.innerHTML += updateHeroPost();
-    articleHero.classList.add("active");
+    articleHero.classList.add("expanded");
   }
 }
 
@@ -43,7 +43,7 @@ function handleAboutMeClick() {
   heroTitle.innerHTML =
     "Hello there! My name is Komal and welcome to my learning journal.";
   articleHero.innerHTML += updateHeroPost();
-  articleHero.classList.remove("active");
+  articleHero.classList.remove("expanded");
   articleHero.classList.add("about-me");
 }
 

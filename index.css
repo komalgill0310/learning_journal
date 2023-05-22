@@ -143,7 +143,7 @@ article {
 }
 
 /* ARTICLE HERO ACTIVE */
-.active {
+.expanded {
   color: black;
   grid-template-rows: repeat(auto-fit, minmax(20px, auto));
   gap: 4px;
@@ -153,13 +153,13 @@ article {
   padding: 0 20px;
 }
 
-.active .article-date {
+.expanded .article-date {
   grid-row: 1;
   padding: 0;
   margin-top: 0;
 }
 
-.active .article-title {
+.expanded .article-title {
   grid-row: 2;
   padding-left: 0;
   padding-right: 0;
@@ -167,13 +167,13 @@ article {
   justify-self: start;
 }
 
-.active .article-body {
+.expanded .article-body {
   grid-row: 3;
   margin-bottom: 17px; /* 17px */
   padding: 0;
 }
 
-.active .article-img {
+.expanded .article-img {
   grid-row: 4 / 5;
   max-width: 421px;
   width: 100%;
@@ -181,29 +181,29 @@ article {
   border-radius: 3px;
 }
 
-.active .article-hero-sub-heading-one {
+.expanded .article-hero-sub-heading-one {
   grid-row: 5;
   grid-column: 1 / -1;
   margin: 0;
 }
 
-.active .article-hero-sub-heading-body-one {
+.expanded .article-hero-sub-heading-body-one {
   grid-row: 6;
   grid-column: 1 / -1;
 }
 
-.active .article-hero-sub-heading-two {
+.expanded .article-hero-sub-heading-two {
   grid-row: 7;
   grid-column: 1 / -1;
   margin: 0;
 }
 
-.active .article-hero-sub-heading-body-two {
+.expanded .article-hero-sub-heading-body-two {
   grid-row: 8;
   grid-column: 1 / -1;
 }
 
-.active .recent-posts-heading {
+.expanded .recent-posts-heading {
   grid-column: 1 / -1;
   justify-self: center;
   font-weight: 700;
@@ -324,7 +324,7 @@ article {
     margin-bottom: 1.5em; /* 24px */
   }
 
-  .active .article-img {
+  .expanded .article-img {
     height: auto;
   }
 
@@ -363,7 +363,7 @@ article {
     text-shadow: 1px -1.5px 2px black;
   }
 
-  .active .article-body,
+  .expanded .article-body,
   .about-me .article-body {
     text-shadow: none;
   }
@@ -377,34 +377,34 @@ article {
     grid-template-columns: repeat(auto-fit, minmax(309px, 1fr));
   }
 
-  .active {
+  .expanded {
     max-width: none;
     align-items: center;
   }
 
-  .active .article-date,
-  .active .article-title,
-  .active .article-body,
-  .active .article-hero-sub-heading-one,
-  .active .article-hero-sub-heading-body-one,
-  .active .article-hero-sub-heading-two,
-  .active .article-hero-sub-heading-body-two {
+  .expanded .article-date,
+  .expanded .article-title,
+  .expanded .article-body,
+  .expanded .article-hero-sub-heading-one,
+  .expanded .article-hero-sub-heading-body-one,
+  .expanded .article-hero-sub-heading-two,
+  .expanded .article-hero-sub-heading-body-two {
     max-width: 600px;
     justify-self: center;
     width: 100%;
   }
 
-  .active .article-img {
+  .expanded .article-img {
     max-width: 979px;
     max-height: 388px;
     height: 100%;
   }
 
-  .active .article-title {
+  .expanded .article-title {
     font-size: 27px;
   }
 
-  .active .article-body,
+  .expanded .article-body,
   .about-me .article-body {
     font-size: 1rem;
     color: black;
