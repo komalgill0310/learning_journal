@@ -419,7 +419,6 @@ article {
     max-width: 849px;
     max-height: 100px;
     margin-left: 20px;
-    margin-bottom: 10px;
     width: 100%;
   }
 
@@ -439,14 +438,14 @@ article {
   .about-me .article-hero-sub-heading-body-one,
   .about-me .article-hero-sub-heading-two,
   .about-me .article-hero-sub-heading-body-two {
-    max-width: 750px;
+    max-width: 650px;
     justify-self: center;
     width: 100%;
     grid-column: 1 / -1;
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media (min-width: 700px) and (max-width: 768px) {
   .about-me .article-body {
     margin-top: 27px;
   }
@@ -456,5 +455,40 @@ article {
   .about-me .article-hero-sub-heading-two,
   .about-me .article-hero-sub-heading-body-two {
     max-width: 550px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-me .article-body {
+    max-width: 700px;
+    width: 100%;
+  }
+
+  .about-me .article-title {
+    max-width: 729px;
+  }
+
+  .about-me .article-hero-sub-heading-one,
+  .about-me .article-hero-sub-heading-body-one,
+  .about-me .article-hero-sub-heading-two,
+  .about-me .article-hero-sub-heading-body-two {
+    max-width: 850px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .about-me .article-title {
+    margin-left: 0;
+  }
+
+  .about-me .article-body {
+    margin-left: 0;
+  }
+
+  .recent-posts-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(409px, 1fr));
   }
 }
