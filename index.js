@@ -1,10 +1,10 @@
 import { posts } from "/posts.js";
 
 const defaultNumOfPostsDisplay = 3;
-const recentPostsSection = document.querySelector(".recent-posts-section");
-const aboutMeLink = document.querySelector("#about-me-link");
+const aboutMeLink = document.querySelector(".about-me-link");
 const articleHero = document.querySelector(".article-hero");
-const btnView = document.getElementById("btn-view");
+const recentPostsSection = document.querySelector(".recent-posts-section");
+const btnView = document.querySelector(".btn-view");
 
 renderData(0, defaultNumOfPostsDisplay);
 
@@ -14,12 +14,37 @@ btnView.addEventListener("click", () => {
   handleBtnViewClick(defaultNumOfPostsDisplay);
 });
 
-function renderData(startIndex, postsLength) {
+function renderData(startIndex, totalNumOfPosts) {
   let articles = "";
-  for (let i = startIndex; i < postsLength; i++) {
+  for (let i = startIndex; i < totalNumOfPosts; i++) {
     articles += createPost(i);
   }
   recentPostsSection.innerHTML += articles;
+}
+
+function heroPostClick() {
+  if (
+    articleHero
+      .querySelector(".article-img")
+      .src.includes("hero-post-background-image.avif")
+  ) {
+    articleHero.innerHTML += updateHeroPost();
+    articleHero.classList.add("active");
+  }
+}
+
+function handleAboutMeClick() {
+  const heroDate = articleHero.querySelector(".article-date");
+  const heroImg = articleHero.querySelector(".article-img");
+  const heroTitle = articleHero.querySelector(".article-title");
+
+  heroDate.remove();
+  heroImg.src = "images/hero_images/profile-pic.jpg";
+  heroTitle.innerHTML =
+    "Hello there! My name is Komal and welcome to my learning journal.";
+  articleHero.innerHTML += updateHeroPost();
+  articleHero.classList.remove("active");
+  articleHero.classList.add("about-me");
 }
 
 function handleBtnViewClick(postsDisplayed) {
@@ -43,31 +68,6 @@ function createPost(index) {
   </article>
  `;
   return post;
-}
-
-function heroPostClick() {
-  if (
-    articleHero
-      .querySelector(".article-img")
-      .src.includes("hero-post-background-image.avif")
-  ) {
-    articleHero.innerHTML += updateHeroPost();
-    articleHero.classList.add("active");
-  }
-}
-
-function handleAboutMeClick() {
-  const heroDate = articleHero.querySelector(".article-date");
-  const heroImg = articleHero.querySelector(".article-img");
-  const heroTitle = articleHero.querySelector(".article-title");
-
-  heroDate.textContent = "";
-  heroImg.src = "images/hero_images/profile-pic.jpg";
-  heroTitle.innerHTML =
-    "Hello there! My name is Komal and welcome to my learning journal.";
-  articleHero.innerHTML += updateHeroPost();
-  articleHero.classList.remove("active");
-  articleHero.classList.add("about-me");
 }
 
 function updateHeroPost() {
