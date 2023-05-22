@@ -181,29 +181,29 @@ article {
   border-radius: 3px;
 }
 
-.expanded .article-hero-sub-heading-one {
+.expanded .hero-subtitle-one {
   grid-row: 5;
   grid-column: 1 / -1;
   margin: 0;
 }
 
-.expanded .article-hero-sub-heading-body-one {
+.expanded .hero-subtext-one {
   grid-row: 6;
   grid-column: 1 / -1;
 }
 
-.expanded .article-hero-sub-heading-two {
+.expanded .hero-subtitle-two {
   grid-row: 7;
   grid-column: 1 / -1;
   margin: 0;
 }
 
-.expanded .article-hero-sub-heading-body-two {
+.expanded .hero-subtext-two {
   grid-row: 8;
   grid-column: 1 / -1;
 }
 
-.expanded .recent-posts-heading {
+.expanded .recent-posts-title {
   grid-column: 1 / -1;
   justify-self: center;
   font-weight: 700;
@@ -240,29 +240,29 @@ article {
   margin-bottom: 23px;
 }
 
-.about-me .article-hero-sub-heading-one {
+.about-me .hero-subtitle-one {
   grid-row: 4;
   grid-column: 1 / -1;
   margin: 0;
 }
 
-.about-me .article-hero-sub-heading-body-one {
+.about-me .hero-subtext-one {
   grid-row: 5;
   grid-column: 1 / -1;
 }
 
-.about-me .article-hero-sub-heading-two {
+.about-me .hero-subtitle-two {
   grid-row: 6;
   grid-column: 1 / -1;
   margin: 0;
 }
 
-.about-me .article-hero-sub-heading-body-two {
+.about-me .hero-subtext-two {
   grid-row: 7;
   grid-column: 1 / -1;
 }
 
-.about-me .recent-posts-heading {
+.about-me .recent-posts-title {
   grid-column: 1 / -1;
   grid-row: 8;
   justify-self: center;
@@ -385,10 +385,10 @@ article {
   .expanded .article-date,
   .expanded .article-title,
   .expanded .article-body,
-  .expanded .article-hero-sub-heading-one,
-  .expanded .article-hero-sub-heading-body-one,
-  .expanded .article-hero-sub-heading-two,
-  .expanded .article-hero-sub-heading-body-two {
+  .expanded .hero-subtitle-one,
+  .expanded .hero-subtext-one,
+  .expanded .hero-subtitle-two,
+  .expanded .hero-subtext-two {
     max-width: 600px;
     justify-self: center;
     width: 100%;
@@ -439,10 +439,10 @@ article {
     max-width: none;
   }
 
-  .about-me .article-hero-sub-heading-one,
-  .about-me .article-hero-sub-heading-body-one,
-  .about-me .article-hero-sub-heading-two,
-  .about-me .article-hero-sub-heading-body-two {
+  .about-me .hero-subtitle-one,
+  .about-me .hero-subtext-one,
+  .about-me .hero-subtitle-two,
+  .about-me .hero-subtext-two {
     max-width: 650px;
     justify-self: center;
     width: 100%;
@@ -455,10 +455,10 @@ article {
     margin-top: 27px;
   }
 
-  .about-me .article-hero-sub-heading-one,
-  .about-me .article-hero-sub-heading-body-one,
-  .about-me .article-hero-sub-heading-two,
-  .about-me .article-hero-sub-heading-body-two {
+  .about-me .hero-subtitle-one,
+  .about-me .hero-subtext-one,
+  .about-me .hero-subtitle-two,
+  .about-me .hero-subtext-two {
     max-width: 550px;
     width: 100%;
   }
@@ -474,10 +474,10 @@ article {
     max-width: 729px;
   }
 
-  .about-me .article-hero-sub-heading-one,
-  .about-me .article-hero-sub-heading-body-one,
-  .about-me .article-hero-sub-heading-two,
-  .about-me .article-hero-sub-heading-body-two {
+  .about-me .hero-subtitle-one,
+  .about-me .hero-subtext-one,
+  .about-me .hero-subtitle-two,
+  .about-me .hero-subtext-two {
     max-width: 850px;
     width: 100%;
   }
