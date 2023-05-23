@@ -488,6 +488,10 @@ article {
     height: 100%;
   }
 
+  .about-me {
+    gap: 1em;
+  }
+
   .about-me .article-img {
     border-radius: 23px;
     box-shadow: 0 2px 1px 1px red;
@@ -498,9 +502,11 @@ article {
 
   .about-me .article-title {
     margin-left: 0;
+    max-width: none;
   }
 
   .about-me .article-body {
+    max-width: none;
     margin: 0;
   }
 
@@ -522,6 +528,6 @@ article {
   .about-me .hero-subtext-two {
     grid-column: 2 / -1;
     justify-self: start;
-    border-radius: none;
+    max-width: none;
   }
 }
