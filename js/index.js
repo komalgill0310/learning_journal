@@ -1,4 +1,4 @@
-import { posts } from "/posts.js";
+import { posts } from "js/posts.js";
 
 const defaultNumOfPostsDisplay = 3;
 const aboutMeLink = document.querySelector(".about-me-link");

@@ -501,7 +501,9 @@ article {
   }
 
   .about-me .article-title {
+    font-size: 1.5rem;
     margin-left: 0;
+    margin-bottom: 13px;
     max-width: none;
   }
 
